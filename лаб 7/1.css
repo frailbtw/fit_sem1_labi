@@ -1,0 +1,448 @@
+body {
+    height: 10000px;
+}
+
+img {
+    height: 300px;
+    width: 300px;
+    border: 3px solid black;
+    margin: 2%;
+    /*1. ПРЕОБРАЗОВАНИЯ*/
+}
+
+.img1:hover {
+    transform: scale(0.5);
+}
+
+.img2:hover {
+    transform: rotate(45deg);
+}
+
+.img3:hover {
+    transform: translate(40px);
+}
+
+.img4:hover {
+    transform: skew(40deg)
+}
+
+/*2.  перспектива*/
+
+.img5 {
+    transform: perspective(300px) rotateX(25deg);
+}
+
+.img6 {
+    transform: perspective(300px) rotateY(45deg);
+}
+
+.img7 {
+    transform: perspective(800px) rotatex(25deg);
+}
+
+.img8 {
+    transform: perspective(300px) rotateY(-45deg);
+}
+
+/*3.  кнопки*/
+.divb {
+    display: flex;
+    justify-content: center;
+}
+
+button {
+    margin-left: 1%;
+    height: 60px;
+    width: 200px;
+    box-shadow: none;
+
+}
+
+.button1:hover {
+    background-color: black;
+    color: white;
+
+}
+
+.button1 {
+    margin-right: 1%;
+}
+
+.divborder:hover {
+    border: 5px solid yellow;
+
+}
+
+.button2:hover {
+    border: 5px solid red;
+    /* Первая граница */
+    margin: 0;
+    box-sizing: border-box;
+
+}
+
+.button3:hover {
+    border-top: 5px solid green;
+    border-bottom: 5px solid green;
+
+}
+
+.button4:hover {
+    border-right: 5px solid blue;
+    border-left: 5px solid blue;
+
+}
+
+.button5:hover {
+    background-image: radial-gradient(yellow, orange, purple, rgb(0, 225, 255), transparent);
+}
+
+/*4.  анимация*/
+.imga1,
+.imga2,
+.imga3,
+.imga4 {
+    height: 150px;
+    width: 150px;
+    transform: perspective(300px) rotateY(45deg);
+    position: relative;
+    animation-direction: alternate;
+    animation-duration: 5s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    margin: 0px;
+}
+
+@keyframes rasclad_cart1 {
+    0% {
+        left: 0;
+        top: 0px;
+        transform: perspective(300px) rotateY(45deg);
+    }
+
+    50% {
+        left: 800px;
+        top: 0px;
+        transform: perspective(300px) rotateY(0deg);
+    }
+
+    100% {
+        left: 100px;
+        top: 300px;
+        ;
+        transform: perspective(300px) rotateY(0deg) scale(2);
+    }
+}
+
+.imga1 {
+    animation-name: rasclad_cart1;
+}
+
+@keyframes rasclad_cart2 {
+    0% {
+        left: 0px;
+        top: 0px;
+        transform: perspective(300px) rotateY(45deg) translate(0, 0, 100px);
+    }
+
+    50% {
+        left: 800px;
+        top: 0px;
+        transform: perspective(300px) rotateY(0deg) translate(-150px, 0);
+    }
+
+    100% {
+        left: 300px;
+        top: 300px;
+        ;
+        transform: perspective(300px) rotateY(0deg) scale(2);
+        filter: blur(10px);
+    }
+}
+
+.imga2 {
+    transform: translate(-150px) perspective(300px) rotateY(45deg);
+    animation-name: rasclad_cart2;
+
+}
+
+@keyframes rasclad_cart3 {
+    0% {
+        left: 0px;
+        top: 0px;
+        transform: perspective(300px) rotateY(45deg) translate(0, 0, 200px);
+    }
+
+    50% {
+        left: 800px;
+        top: 0px;
+        transform: perspective(300px) rotateY(0deg) translate(-300px, 0);
+    }
+
+    100% {
+        left: 500px;
+        top: 300px;
+        ;
+        transform: perspective(300px) rotateY(0deg) scale(2);
+        filter: grayscale(1);
+    }
+}
+
+.imga3 {
+    transform: translate(-300px) perspective(300px) rotateY(45deg);
+    animation-name: rasclad_cart3;
+}
+
+@keyframes rasclad_cart4 {
+    0% {
+        left: 0px;
+        top: 0px;
+        transform: perspective(300px) rotateY(45deg) translate(0, 0, 300px);
+    }
+
+    50% {
+        left: 800px;
+        top: 0px;
+        transform: perspective(300px) rotateY(0deg) translate(-450px, 0);
+    }
+
+    100% {
+        left: 700px;
+        top: 300px;
+        ;
+        transform: perspective(300px) rotateY(0deg) scale(2);
+        filter: invert(1);
+    }
+}
+
+.imga4 {
+    transform: translate(-450px) perspective(300px) rotateY(45deg);
+    animation-name: rasclad_cart4;
+}
+
+
+
+/*5.  анимация*/
+
+figure {
+    height: 328px;
+    width: 300px;
+    border: 1px solid rgb(173, 170, 170);
+    padding: 5px;
+    text-align: center;
+    display: inline-block;
+    margin: 0;
+
+
+
+}
+
+figure>img {
+    width: 90%;
+    height: 90%;
+    overflow: hidden;
+
+}
+
+
+
+.line {
+    justify-content: center;
+    display: flex;
+}
+
+.contener {
+    height: 700px;
+    width: 700px;
+    animation: fivepicturs 5s linear infinite;
+    animation-direction: alternate;
+    animation-fill-mode: forwards;
+    border: 2px solid rgb(197, 191, 191);
+
+
+}
+
+.contener>img {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+@keyframes fivepicturs {
+    20% {
+        background-image: url(cur.jpg);
+
+    }
+
+    40% {
+        background-image: url(photo1701341162\ \(1\).jpeg);
+    }
+
+    60% {
+        background-image: url(ember_spirit.png);
+
+    }
+
+    80% {
+        background-image: url(qqe.jpg);
+    }
+
+    100% {
+        background-image: url(photo1701341162\ \(2\).jpeg);
+
+    }
+}
+
+/* 6 задание */
+@keyframes move1 {
+    0% {
+        left: 0px;
+    }
+
+    100% {
+        left: 200px;
+    }
+}
+
+.move1 {
+    animation: move1 infinite alternate 3s;
+    position: relative;
+}
+
+@keyframes move2 {
+    0% {
+        left: 0px;
+    }
+
+    100% {
+        left: 110%;
+        
+    }
+}
+
+.move2 {
+    animation: move2 infinite ease-in-out 5s;
+    position: relative;
+}
+
+@keyframes move3 {
+    0% {
+        left: 0px;
+        border-radius: 0%;
+    }
+
+    100% {
+        left: 1000px;
+        border-radius: 50%;
+    }
+}
+
+.move3 {
+    animation: move3 alternate infinite ease-in-out 5s;
+    position: relative;
+}
+
+@keyframes move4 {
+    0% {
+        top: 0px;
+    }
+
+    100% {
+        top: 50px;
+    }
+}
+
+.move4 {
+    animation: move4 infinite alternate 3s;
+    position: relative;
+}
+
+@keyframes move5 {
+    0% {
+        left: 0px;
+        top: 0px
+    }
+
+    25% {
+        left: 1000px;
+        top: 0px;
+    }
+
+    50% {
+        left: 1000px;
+        top: 1000px;
+    }
+
+    75% {
+        left: 0px;
+        top: 1000px;
+    }
+
+    100% {
+        left: 0px;
+        top: 0px;
+    }
+}
+
+.move5 {
+    animation: move5 infinite alternate 3s;
+    position: relative;
+}
+
+/*7 задание*/
+
+.text {
+    height: 300px;
+    width: 300px;
+    animation: text 5s infinite linear;
+}
+
+@keyframes text {
+    0% {
+        color: red;
+    }
+
+    50% {
+        color: green;
+    }
+
+    100% {
+        color: blue;
+    }
+}
+
+/*8 задание*/
+h1 {
+    animation: h 3s linear infinite;
+    margin: 1%;
+    text-align: center;
+}
+
+@keyframes h {
+    0% {
+        filter: opacity(0%);
+    }
+
+    100% {
+        filter: opacity(80%);
+    }
+}
+.nav li { 
+    display: inline;
+    float: left; 
+}
+.nav a {
+    display: inline-block; 
+    width: 130px;
+    border: 1.5px solid rgb(34, 147, 22);
+    padding: 10px 20px 10px 20px;
+    background-color: yellow;
+    text-decoration: none;
+    color: green;
+    font-size: 20px;
+    text-align: center;
+}
+.nav a:hover{
+    background-color: rgb(255, 222, 4);
+    color: rgb(8, 94, 8);
+}

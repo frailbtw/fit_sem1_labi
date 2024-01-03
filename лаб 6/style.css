@@ -1,0 +1,19 @@
+ul {
+    list-style-type: none; 
+  }
+  
+  li {
+    padding-left: 20px; 
+    background-image: url('pngtree-checkmark-icon-green-color-png-image_1952984.jpg'); 
+    background-size: 16px; 
+    background-repeat: no-repeat; 
+    background-position: 0 4px;
+  }
+
+  body {
+    background-image: url(it_bstu.jpg) ;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: right top;
+    background-size: 75px;
+  }

@@ -1,0 +1,75 @@
+body{
+    padding: 0;
+    margin: 0;
+    background-attachment: fixed;
+    background-image: url(img/it_bstu.jpg);
+    background-position: right top;
+    background-repeat: no-repeat;
+    background-size: 300px 300px;
+}
+
+h1{
+    text-align: center;
+    color: red;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.text-container div h3{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 21px;
+    color: #000;
+}
+
+.text-container div:first-child p{
+   font-family: Arial;
+   font-size: 16px;
+   color: blue; 
+}
+
+.text-container div:nth-child(2) p{
+    font-family: 'Gill Sans';
+    font-size: 19px;
+    color: red; 
+ }
+ 
+
+ .text-container div:last-child p{
+    font-family: 'Trebuchet MS';
+    font-size: 21px;
+    color: #000; 
+ }
+
+.text-container div p span{
+    color: yellow;
+}
+
+table{
+    border-collapse: collapse;
+}
+
+ul li{
+    background-image: url(img/check-mark.svg);
+    list-style: none;
+    background-size: 10px 10px;
+    background-repeat: no-repeat;
+    background-position: 0 4px;
+    padding-left: 20px;
+}
+
+.data-photo{
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+}
+
+.data-photo img{
+    display: block;
+    margin: 0 15px;
+    width: 400px;
+}
+
+.data-photo p{
+    margin: 0;
+    text-indent: 25px;
+}

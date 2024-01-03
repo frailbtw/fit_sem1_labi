@@ -1,0 +1,43 @@
+body{
+    padding: 0;
+    margin: 0;
+}
+
+.photo-container figure img{
+    max-width: 100%;
+    padding: 0 15px;
+    box-sizing: border-box;
+    display: block;
+}
+
+.photo-container figure figcaption{
+    text-align: center;
+}
+
+figure {
+    display:inline-flex;
+    text-align:center;
+}
+img {
+    width: 250px;
+    height: 500px;
+    object-fit: contain;
+    
+  }
+  
+  figcaption {
+    padding: 7px; 
+    margin: 10px 0 5px 5px; 
+    text-align:justify;
+  }
+  a {
+    vertical-align: bottom;
+  }
+  figure {
+    padding: 12px; /* Поля вокруг */
+    display: block; /* Блочный элемент */
+    width: 150px; /* Ширина */
+    float: left; /* Блоки выстраиваются по горизонтали */
+    margin: 0 10px 10px 0; /* Отступы */
+    text-align: center; /* Выравнивание по центру */
+   }
