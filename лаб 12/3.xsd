@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <!-- Верхние строки объявляют XML-схему с использованием пространства имен xs. -->
+    <?xml-stylesheet type="text/css" href="1.css"?>
+
+    <xs:element name="products">
+        <!-- Определение элемента 'products'. -->
+        <xs:complexType>
+            <!-- Определение сложного типа данных для элемента 'products'. -->
+            <xs:sequence>
+                <!-- Определение последовательности элементов внутри 'products'. -->
+                <xs:element name="product" maxOccurs="unbounded">
+                    <!-- Определение элемента 'product' с максимальным числом вхождений 'unbounded' (неограниченное количество). -->
+                    <xs:complexType>
+                        <!-- Определение сложного типа данных для элемента 'product'. -->
+                        <xs:sequence>
+                            <!-- Определение последовательности элементов внутри 'product'. -->
+                            <xs:element name="name" type="xs:string"/>
+                            <!-- Определение элемента 'name' с типом данных 'xs:string' (строка). -->
+                            <xs:element name="price" type="xs:decimal"/>
+                            <!-- Определение элемента 'price' с типом данных 'xs:decimal' (десятичное число). -->
+                            <xs:element name="brand" type="xs:string"/>
+                            <!-- Определение элемента 'brand' с типом данных 'xs:string' (строка). -->
+                            <xs:element name="category" type="xs:string"/>
+                            <!-- Определение элемента 'category' с типом данных 'xs:string' (строка). -->
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+</xs:schema>

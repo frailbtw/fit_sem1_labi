@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/css" href="1.css"?>
+<products xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="3.xsd">
+    <product>
+        <name>Laptop</name>
+        <price>1200</price>
+        <brand>HP</brand>
+        <category>Electronics</category>
+    </product>
+    <product>
+        <name>Smartphone</name>
+        <price>700</price>
+        <brand>Samsung</brand>
+        <category>Electronics</category>
+    </product>
+    <product>
+        <name>Running Shoes</name>
+        <price>80</price>
+        <brand>Nike</brand>
+        <category>Footwear</category>
+    </product>
+    <product>
+        <name>HD TV</name>
+        <price>1000</price>
+        <brand>Sony</brand>
+        <category>Electronics</category>
+    </product>
+    <product>
+        <name>Backpack</name>
+        <price>50</price>
+        <brand>Adidas</brand>
+        <category>Accessories</category>
+    </product>
+</products>

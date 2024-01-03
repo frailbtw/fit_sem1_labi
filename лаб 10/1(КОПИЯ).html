@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+.container {
+display: flex;
+flex-flow: row wrap;
+align-items: center; /*выравнивание по вертикали*/
+justify-content: space-between; /*выравнивание по горизонтали*/
+
+}
+
+.d{
+    border: 1px grey solid;
+    text-align: center;
+margin-top: 1%;
+}
+.div1 {
+flex-basis: 100%;
+}
+.div2 {
+flex-basis: 24%;
+}
+.div3{
+    flex-basis: 46%;
+}
+.div4{
+    flex-basis: 24%;
+
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="d div1">Заголовок</div>
+        <div class="d div2">Ячейка 1</div>
+        <div class="d div3">Ячейка 2</div>
+        <div class="d div4">Ячейка 3</div>
+    </div>
+        
+</body>
+</html>

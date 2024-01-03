@@ -1,0 +1,99 @@
+
+.logotype{
+    img{
+        height: 100%;   
+        border: none;
+    }
+}
+
+.header{
+    height: 15%;
+    padding: 10px;
+    display: grid;
+    grid-gap: 3em;
+    grid-template-columns: 25% 75% ;
+    grid-template-rows: 15vh;
+    background-color: rgb(224, 148, 250);
+
+
+}
+
+
+// миксин
+@mixin border{
+    border:1px solid grey;
+    border-radius: 20px;
+}
+// присвоение миксина селекторам
+.header{
+    @include border;
+} 
+.logotype{
+    @include border;
+} 
+.link{
+    @include border;    
+}
+
+// шаблон
+%shablon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5%;
+}
+// присввоения шаблона селекторам
+.logotype
+{
+    @extend %shablon;
+}
+
+.nav{
+    @extend %shablon;
+}
+
+// Функция для вычисления размера шрифта 
+
+// Определение базового размера шрифта
+$base-font-size: 16px;
+
+@function calculate-font-size($size) {
+  @return $size * 1rem;
+}
+
+h1 {
+  font-size: calculate-font-size(2); // Заголовок получит размер 2 раза больше базового
+}
+
+p {
+  font-size: calculate-font-size(1); // Текст будет иметь базовый размер
+}
+
+
+
+// функция с наличием условных и логических операторов 
+@mixin link($margin){
+    @if ($margin>=5%)
+    {   margin: $margin;
+        padding:1%;}
+    @else{  margin: $margin; 
+            padding:0;}
+}
+.link{
+    @include link(5%)
+
+}
+
+// Функция, проверяющая, является ли число четным
+@function is-even($number) {
+    @return $number % 2 == 0;
+  }
+  
+
+  $myNumber: 10;
+  
+  body {
+    font-size: if(is-even($myNumber), 16px, 14px); // Если число четное, то 16px, иначе 14px
+    color: if(is-even($myNumber), blue, red); // Если число четное, то синий цвет, иначе красный цвет
+  }
+  

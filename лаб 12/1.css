@@ -1,0 +1,36 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+products {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+product {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+    margin: 10px;
+    width: 200px;
+    text-align: center;
+    background-color: #f9f9f9;
+}
+
+name {
+    font-weight: bold;
+}
+
+price {
+    color: green;
+}
+
+brand {
+    font-style: italic;
+}
+
+category {
+    font-size: 0.8em;
+    color: #555;
+}

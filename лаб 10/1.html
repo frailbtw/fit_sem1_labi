@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+body{height: 5000px;}
+.container {
+display: flex;
+flex-flow:row wrap;
+align-items: start; /*выравнивание по вертикали*/
+justify-content: space-between; /*выравнивание по горизонтали*/
+
+}
+
+.d{
+    border: 1px grey solid;
+    text-align: center;
+    margin-top: 1%;
+    padding:1% ;
+    border-radius: 20px;
+}
+.div1 {
+flex-basis: 100%;
+}
+.div2 {
+flex-basis: 24%;
+
+}
+.div3{
+    flex-basis: 45%;
+}
+.div4{
+    flex-basis: 24%;
+}
+
+.menu{
+    margin-top: 200px;
+    border: none;
+    text-align: left;
+}
+/*выпадающий список*/
+ul{list-style: none;
+margin: 0;
+padding: 0;}
+a{    
+    text-decoration: none;
+    size:10px;
+    
+}
+.first>li{
+    text-align: center;
+    border: 1px grey solid;
+    width: 300px;
+    border-radius: 20px;
+    padding: 8px;
+    font-size: 30px;
+    /* margin-left: 17%; */
+
+}
+.second>li{
+    display:inline-block;
+    border: 1px grey solid;
+    width: 300px;
+    border-radius: 20px;
+    padding: 8px;
+    text-align: center;
+    margin-top:25px ;
+}
+li .second{
+display: none;
+position: absolute;
+left: 0;
+margin-top: 25px;
+}
+li:hover .second{
+  display: block;  
+}
+
+@media (max-width: 520px) {
+    .first>li{
+        margin-left:15% ;
+    }
+}
+
+/* фотогалерея */
+.conteiner2{
+            width: 100%;
+            margin-top: 400px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            
+        }
+        figure {
+            height: 330px;
+            width: 300px;
+            border: 1px solid rgb(173, 170, 170);
+            padding: 5px;
+            text-align: center;
+            display: inline-block;
+            margin: 0 5px 2% 0;
+
+        }
+
+        figure>img {
+            width: 100%;
+            height: 90%;
+            overflow: hidden;
+            /* border: solid black 2px; */
+        }
+        h1{
+            width: 100%;
+            text-align: center;
+        }
+
+        /* адаптация для 480px */
+        @media (max-width:980px){
+            figcaption,h1{
+                color: red;
+            }
+            .container{
+                justify-content: center;
+            }
+            figure{
+                width: 100%;
+            }
+            @media (max-width:780px){
+            figcaption,h1{
+                color: green;
+            }
+            .container{
+                justify-content: center;
+            }
+            figure{
+                width: 100%;
+            }
+            @media (max-width:580px){
+            figcaption,h1{
+                color: blue;
+            }
+            .container{
+                justify-content: center;
+            }
+            figure{
+                width: 100%;
+            }
+            
+        }
+        
+        /* адаптация для 768px */
+        @import url("768px.css") (max-width:768px); 
+        /* хз, почему то не работает((( */
+    </style>
+    <link rel="stylesheet" href="1280px.css">
+</head>
+<body>
+    <div class="container">
+        <div class="d div1">Заголовок</div>
+        <div class="d div2">
+            <video width="100%" height="105" controls autoplay muted>
+                <source src="C:\Users\nikit\OneDrive\Рабочий стол\КЯР\лаб 10\Cерега Пират псевдокавер where is my mind.mp4" type="video/mp4">
+               
+            </video>
+            <video width="100%" height="105" controls autoplay muted>
+                <source src="C:\Users\nikit\OneDrive\Рабочий стол\КЯР\лаб 10\Прокаст на инвокере за 3 секунды.mp4" type="video/mp4">
+            </video>
+            <video width="100%" height="105" controls autoplay muted>
+                <source src="c:\Users\nikit\Downloads\disa disa disa ❤.mp4" type="video/mp4">
+            </video>                            
+        </div>
+        <!-- ТРИ ВИДЕО -->
+        <div class="d div3">
+            <p>
+                Flexbox (Flexible Box) — это технология CSS, предназначенная для создания более эффективной и предсказуемой верстки внутри контейнеров. Flexbox предоставляет простую и мощную модель размещения элементов внутри контейнера, что упрощает создание адаптивных и сложных макетов.
+                <br>
+                Основные принципы Flexbox-верстки:
+                <br>
+                1. Контейнер и элементы:
+                - Элемент, который вы хотите сделать гибким (flex-контейнер), должен иметь свойство `display: flex;` или `display: inline-flex;`.
+                - Дочерние элементы flex-контейнера автоматически становятся flex-элементами.
+                <br>
+                2. Оси:
+                - Flexbox работает вдоль двух ортогональных осях: оси строки (`row`) и оси столбца (`column`).
+                - Свойство `flex-direction` определяет направление оси.
+                <br>
+                3. Выравнивание:
+                - `justify-content` управляет выравниванием по оси, определенной `flex-direction`.
+                - `align-items` управляет выравниванием по перпендикулярной оси.
+                - `align-self` позволяет переопределить выравнивание для отдельных элементов.
+                <br>
+                4. Размеры:
+                - `flex-grow`, `flex-shrink` и `flex-basis` определяют, как элементы растут, сжимаются и какое пространство они занимают.
+                <br>
+                5. Порядок:
+                - Свойство `order` определяет порядок flex-элементов.
+                <br>
+                Flexbox улучшает респонсивность и управление пространством на странице, делая CSS-верстку более гибкой и легкой для поддержки различных размеров экранов и устройств.
+            </p>
+        </div>
+        <!-- ИНФОРМАЦИЯ «Flexbox-верстка» -->
+        <div class="d div4">
+            <audio controls>
+                <source src="win 00000000.1%.mp3" type="audio/mp3">
+                Ваш браузер не поддерживает тег audio.
+              </audio>
+              <audio controls>
+                <source src="C:\Users\nikit\OneDrive\Рабочий стол\КЯР\лаб 10\Monkeys Spinning Monkeys (Kevin MacLeod) - Background Music (HD).m4a" type="audio/mp3">
+                Ваш браузер не поддерживает тег audio.
+              </audio>
+              <audio controls>
+                <source src="C:\Users\nikit\OneDrive\Рабочий стол\КЯР\лаб 10\Metal pipe but HD.m4a" type="audio/mp3">
+                Ваш браузер не поддерживает тег audio.
+              </audio>
+                                          
+        </div>
+        <!-- ТРИ АУДИОФАЙЛА -->
+      
+    </div>
+    <div class="d b menu">
+        <ul class="first">
+            <li><a href="">Меню &nbsp;&nbsp;&nbsp;&#8801;</a>
+                <ul class="second">
+                    <li><a href="">Ячейка 1</a></li>
+                    <li><a href="">Ячейка 2</a></li>
+                    <li><a href="">Ячейка 3</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+   
+    <div class="conteiner2">
+        <h1>дока 2023</h1>
+        <figure >
+            <img src="gallery/axe.jpg" >
+            <figcaption>топор</figcaption>
+        </figure>
+        <figure>
+            <img src="gallery/chen.jpg">
+            <figcaption>сильнейший</figcaption>
+        </figure>
+        <figure>
+            <img src="gallery/clock.jpg">
+            <figcaption>клок</figcaption>
+        </figure>
+        <figure>
+            <img src="gallery/cm.jpg">
+            <figcaption>Кристалка</figcaption>
+        </figure>
+        <figure>
+            <img src="gallery/doom.jpg">
+            <figcaption>панк</figcaption>
+        </figure>
+        
+        <figure>
+            <img src="gallery/ds.jpg">
+            <figcaption>дарк сир</figcaption>
+        </figure>
+        <figure>
+            <img src="gallery/lesh.jpg">
+            <figcaption>леший</figcaption>
+        </figure>
+        <figure>
+            <img src="gallery/lich.jpg">
+            <figcaption>чайник</figcaption>
+        </figure>
+        <figure>
+            <img src="gallery/lina.jpg">
+            <figcaption>огонь</figcaption>
+        </figure>
+        <figure>
+            <img src="gallery/morph.jpg">
+            <figcaption>вода</figcaption>
+        </figure>
+        <figure>
+            <img src="gallery/sf.jpg">
+            <figcaption>денди</figcaption>
+        </figure>
+        <figure>
+            <img src="gallery/pudge.jpg">
+            <figcaption>курсед</figcaption>
+        </figure>
+        
+    </div>
+</body>
+</html>
