@@ -1,0 +1,24 @@
+h1, h2, h3{
+    color: purple;
+    font: 16pt Monotype Corsiva;
+}
+aaa {color: red;
+    font: 18pt Times New Roman;
+}
+bbb {color: yellow;
+    font: 20pt Times New Roman;
+}
+ccc {color: green;
+    font: 22pt Times New Roman;
+}
+
+p {
+    color:blue;
+    font: 16 pt Times Arial;
+}
+h3 {
+    color: yellow;
+}
+h2+ table tr td {
+    color: blue;
+}
