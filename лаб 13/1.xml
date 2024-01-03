@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="1.xsl"?>
+
+<products>
+    <product>
+        <name>Laptop</name>
+        <price>1200</price>
+        <brand>HP</brand>
+        <category>Electronics</category>
+    </product>
+    <product>
+        <name>Smartphone</name>
+        <price>2700</price>
+        <brand>Samsung</brand>
+        <category>Electronics</category>
+    </product>
+    <product>
+        <name>Running Shoes</name>
+        <price>10000</price>
+        <brand>Nike</brand>
+        <category>Footwear</category>
+    </product>
+    <product>
+        <name>HD TV</name>
+        <price>5000</price>
+        <brand>Sony</brand>
+        <category>Electronics</category>
+    </product>
+    <product>
+        <name>Backpack</name>
+        <price>50</price>
+        <brand>Adidas</brand>
+        <category>Accessories</category>
+    </product>
+</products>

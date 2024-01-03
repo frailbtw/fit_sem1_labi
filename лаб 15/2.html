@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Форма заказа товара</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 12px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <form id="orderForm">
+        <label for="productName">Наименование товара:</label>
+        <input type="text" id="productName" name="productName" required>
+
+        <label for="quantity">Количество:</label>
+        <input type="number" id="quantity" name="quantity" required>
+
+        <label for="customerName">Ваше имя:</label>
+        <input type="text" id="customerName" name="customerName" required>
+
+        <label for="customerEmail">Ваш Email:</label>
+        <input type="email" id="customerEmail" name="customerEmail" required>
+
+        <button type="button" onclick="submitForm()">Заказать</button>
+    </form>
+
+    <footer id="orderSummary"></footer>
+
+    <script>
+        function submitForm() {
+            // Получаем значения из формы
+            var productName = document.getElementById("productName").value;
+            var quantity = document.getElementById("quantity").value;
+            var customerName = document.getElementById("customerName").value;
+            var customerEmail = document.getElementById("customerEmail").value;
+
+            // Формируем строку с заказом
+            var orderSummary = "Заказ: " + quantity + " шт. " + productName + " для " + customerName + ". Контактный Email: " + customerEmail;
+
+            // Выводим значения в footer
+            document.getElementById("orderSummary").innerText = orderSummary;
+        }
+    </script>
+
+</body>
+</html>

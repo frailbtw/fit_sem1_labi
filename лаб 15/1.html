@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Фотогалерея</title>
+    <style>
+        .gallery {
+            display: flex;
+            justify-content: space-around;
+            margin: 20px;
+        }
+
+        .photo-container {
+            position: relative;
+            cursor: pointer;
+            max-width: 300px;
+            height: 300px;
+        }
+
+        .photo {
+            height: 100%;
+            width: 100%;
+            border: 0;
+            transition: transform 0.2s;
+        }
+
+        .description {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0, 0, 0, 0.7);
+            color: #fff;
+            padding: 10px;
+            opacity: 0;
+            transition: opacity 0.2s;
+        }
+
+        .photo-border {
+            border: 10px solid red;
+        }
+
+        #imageContainer {
+            display: flex;
+        }
+
+        .hover-image {
+            width: 300px;
+            /* Установите размеры изображений в соответствии с вашими требованиями */
+            height: 300px;
+            margin: 5px;
+            transition: transform 0.3s ease-in-out;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="gallery">
+        <div class="photo-container" onmouseover="showDescription(1)" onmouseout="hideDescription(1)">
+            <img src="photo/photo1701636398 (3).jpeg" alt="Photo 1" class="photo" id="photo1">
+            <div class="description" id="desc1">
+                Описание фото 1
+            </div>
+        </div>
+        <div class="photo-container" onclick="showBorder(2)">
+            <img src="photo/photo1701636398 (2).jpeg" alt="Photo 2" class="photo" id="photo2">
+
+        </div>
+        <div class="photo-container" onmouseout="hideDescription(3)">
+            <img src="photo/photo1701636398 (1).jpeg" alt="Photo 3" class="photo" id="photo3">
+
+        </div>
+        <!-- <div class="photo-container" onmouseover="showDescription(4)" onmouseout="hideDescription(4)" onclick="toggleImage()">
+        <img src="image/a.gif" alt="Photo 4" class="photo" id="photo4">
+        
+    </div> -->
+        <div class="photo-container" onmouseover="showDescription(4)" onmouseout="hideDescription(4)"
+            onclick="toggleImage()">
+            <img src="photo/sf.gif"  class="hover-image" id="image4">
+    
+        </div>
+    </div>
+
+    <script>
+        function showDescription(photoNumber) {
+            const description = document.getElementById(`desc${photoNumber}`);
+            description.style.opacity = 1;
+        }
+
+        function hideDescription(photoNumber) {
+            const description = document.getElementById(`desc${photoNumber}`);
+            description.style.opacity = 0;
+        }
+
+        function showBorder(photoNumber) {
+            // Убираем границу у всех фото
+            for (let i = 1; i <= 3; i++) {
+                const photo = document.getElementById(`photo${i}`);
+                photo.classList.remove("photo-border");
+            }
+
+            // Добавляем границу к выбранному фото
+            const selectedPhoto = document.getElementById(`photo${photoNumber}`);
+            selectedPhoto.classList.add("photo-border");
+        }
+        document.addEventListener("DOMContentLoaded", function () {
+            var lastImage = document.getElementById("image4");
+
+            lastImage.addEventListener("mouseenter", function () {
+                lastImage.src = "photo/photo1701636398 (6).jpeg"; 
+            });
+
+            lastImage.addEventListener("mouseleave", function () {
+                lastImage.src = "photo/photo1701637238.jpeg";
+            });
+        });
+    </script>
+
+</body>
+
+</html>

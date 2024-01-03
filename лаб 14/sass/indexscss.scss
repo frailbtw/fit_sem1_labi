@@ -1,0 +1,45 @@
+*{
+    font-family: Arial;
+}
+
+
+%center{
+    text-align: center;
+}
+
+h1{
+    @extend %center;
+}
+h2{
+    @extend %center;
+}
+p{
+    color: blue;
+    font-size: 30px;
+}
+font{
+    color:#9731e0; 
+    size:3px;
+}
+#table {
+    @extend %center;
+    width: 90%;
+    height: 600px;
+    border-collapse: collapse;
+    border: 1px solid black;
+    justify-content: center;
+  }
+%table{
+    border: 1px solid black;
+    padding: 8px; 
+}
+  #table td{
+    @extend %table;
+  }
+   #table th {
+    @extend %table;
+ }
+img{
+    width: 100px;
+    height: 100px;
+}

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+        }
+        svg{
+            background-color: brown;
+            height: 300px;
+            width: 100%;
+            
+        }
+    </style>
+</head>
+<body>
+    <svg xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <!-- Определение пути с id "idname" -->
+          <path
+           id="idname"
+           fill="blue"
+           stroke="black" 
+           d="M10 80 Q 52.5 10, 95 80 T 180 80" />
+        </defs>
+        
+        <!-- Использование определенного пути с помощью элемента "use" -->
+        <use xlink:href="#idname" />
+      
+        <!-- Добавление текста, следующего по контуру пути "idname" -->
+        <text x="10" y="0" font-family="Arial" font-size="36">
+          <textPath xlink:href="#idname">
+            Write your text. (sigma)
+          </textPath>
+        </text>
+      </svg>
+    <svg  xmlns="http://www.w3.org/2000/svg">
+      <circle cx="50" cy="50" r="40" fill="blue" />
+      <rect  x="110" y="10" width="90" height="80" fill="red"/>
+      <ellipse cx="290" cy="50" rx="70" ry="40" fill="green" />
+      <polygon  points="440 30, 490 100, 390 100" fill="yellow" />
+      <polyline points="0 100,230 100,210 130,500 130" fill="none" stroke="purple" stroke-width="2" />
+    </svg>
+      
+</body>
+</html>

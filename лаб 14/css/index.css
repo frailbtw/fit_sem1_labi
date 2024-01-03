@@ -1,0 +1,28 @@
+h1,h2,h3,h4,h5,h6  {    /* 1. гарнитура заголовков*/
+    color: blueviolet;
+    font-family: " Monotype Corsiva";
+}
+.sub-item1 { /*2 задание про гарнитуру подклассов*/
+    margin-left: 18pt;
+    font-family: " Times New Roman"; 
+    color: red;
+}
+.sub-item2 {
+    margin-left: 20pt;
+    font-family: "Times New Roman"; 
+    color: yellow;
+}
+.sub-item3 {
+    margin-left: 22pt; 
+    font-family: "Times New Roman"; 
+    color: blue;
+}
+.nig td{
+    /* background: #000; */
+}
+svg{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    width: 100px;
+    height: 100px;
+}

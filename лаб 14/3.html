@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        svg{
+            height: 500px;
+            width: 100%;
+            background-image: linear-gradient(to right,crimson,purple);
+        }
+    </style>
+</head>
+<body>
+    <svg>
+        <defs>
+            <path id="home1" d="M100 59.375l-18.75-18.75v-28.125h-12.5v15.625l-18.75-18.75-50 50v3.125h12.5v31.25h31.25v-18.75h12.5v18.75h31.25v-31.25h12.5z"/>
+        </defs>
+        
+        <use xlink:href="#home1" transform="translate(0, 0)"/>
+        <use xlink:href="#home1" transform="translate(200, 0)"/>
+        <use xlink:href="#home1" transform="translate(400, 0)"/>
+        <use xlink:href="#home1" transform="translate(1000, 200)"/>
+        <use xlink:href="#home1" transform="translate(1300, 400)"/>
+    </svg>
+</body>
+</html>
