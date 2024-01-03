@@ -1,0 +1,27 @@
+.row>div{
+    /* background-color: rgb(152, 48, 250); */
+    border: 2px solid gray;
+    border-radius: 20px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+
+
+}
+.row {
+    display: flex;
+    margin: 3%;
+    justify-content: center;
+}
+
+.box1{
+    background-color: rgb(225, 67, 209);
+    width: 100%;
+    height: 100%;
+
+}
+
+.container{
+    padding: 0;
+}

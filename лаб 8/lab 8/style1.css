@@ -1,0 +1,374 @@
+div{
+    display: inline-block;
+    margin: 33px;
+}
+img{
+    width: 222px;
+    height: 150px;
+}
+.one:hover{
+    transform: scale(0.5);
+}
+.two:hover{
+    transform: rotate(45deg);
+}
+.three:hover{
+    transform: translate(50px);
+}
+.four:hover{
+    transform: skew(-20deg);
+}
+.five{
+    transform-style: preserve-3d;
+    transform: perspective(300px) rotateX(45deg);
+}
+.six{
+    transform-style: preserve-3d;
+    transform: perspective(300px) rotateY(45deg);
+}
+.seven{
+    transform-style: preserve-3d;
+    transform: perspective(300px) rotateX(-45deg);
+}
+.eight{
+    transform-style: preserve-3d;
+    transform: perspective(300px) rotateY(-45deg);
+}
+button{
+    display: inline-block;
+    margin: 15px;
+    width: 100px;
+    height: 30px;
+}
+.but1:hover{
+    background-color: rgb(0, 0, 0);
+    color: aliceblue;
+}
+.but2:hover{
+    background-color: rgb(255, 255, 255);
+    border: 4px solid red;
+    outline: 4px solid yellow;
+}
+.but3:hover{
+    border-top: 4px solid green;
+    border-bottom: 4px solid green;
+    background-color: rgb(255, 255, 255);
+    border-left: none;
+    border-right: none;
+}
+.but4:hover{
+    border-right: 4px solid blue;
+    border-left: 4px solid blue;
+    background-color: rgb(255, 255, 255);
+    border-top: none;
+    border-bottom: none;
+}
+.but5:hover{
+    background-color: rgb(255, 255, 255);
+    border: hidden;
+    background-image: radial-gradient(yellow, yellow 10%, rgb(250, 0, 255) 35%, rgb(0, 225, 255) 85%)
+}
+
+/*Задание 4*/
+/*#two, #three, #four{
+    
+    margin-left: -200px;
+}*/
+#one {
+    display: inline-block;
+
+    animation: img1 3s linear 1;
+    animation-fill-mode: forwards;
+
+    transform-style: preserve-3d;
+    transform:perspective(300px) rotateY(40deg);
+    position: relative;
+}
+@keyframes img1{
+    0%{
+        left: 0;
+    }
+    50%{
+        transform-style: preserve-3d;
+        transform: rotateY(0deg);
+        left:0;
+    }   
+    100%{
+        transform-style: preserve-3d;
+        transform: rotateY(0deg);
+    }
+}
+#two {
+    display: inline-block;
+
+    animation: img2 3s linear 1;
+    animation-fill-mode: forwards;
+
+    transform-style: preserve-3d;
+    transform:perspective(300px) rotateY(40deg);
+    position: relative;
+}
+@keyframes img2{
+    0%{
+        margin-left: -200px;
+        left: 0;
+    }
+    50%{
+        margin-left: -200px;
+        transform-style: preserve-3d;
+        transform: rotateY(0deg);
+        left:0;
+    }   
+    100%{
+        transform-style: preserve-3d;
+        transform: rotateY(0deg);
+        filter: blur(10px);
+    }
+}
+#three {
+    display: inline-block;
+
+    animation: img3 3s linear 1;
+    animation-fill-mode: forwards;
+
+    transform-style: preserve-3d;
+    transform:perspective(300px) rotateY(40deg);
+    position: relative;
+}
+@keyframes img3{
+    0%{
+        margin-left: -200px;
+        left: 0;
+    }
+    50%{
+        margin-left: -200px;
+        transform-style: preserve-3d;
+        transform: rotateY(0deg);
+        left:0;
+    }   
+    100%{
+        transform-style: preserve-3d;
+        transform: rotateY(0deg);
+        filter:grayscale(1);
+    }
+}
+#four {
+    display: inline-block;
+    
+    animation: img4 3s linear 1;
+    animation-fill-mode: forwards;
+
+    transform-style: preserve-3d;
+    transform:perspective(300px) rotateY(40deg);
+    position: relative;
+}
+@keyframes img4{
+    0%{
+        margin-left: -200px;
+        left: 0;
+    }
+    50%{
+        margin-left: -200px;
+        transform-style: preserve-3d;
+        transform: rotateY(0deg);
+        left:0;
+    }   
+    100%{
+        transform-style: preserve-3d;
+        transform: rotateY(0deg);
+        filter:invert(1);
+    }
+}
+
+/*Задание 5*/
+.bgim{
+    border: 3px solid black;
+    width: 900px;
+    height: 400px;
+    background-image: url('0.jpg');
+    animation: bgim 5s linear infinite;
+    
+
+    position: relative;
+}
+@keyframes bgim
+{
+   0% { 
+    background-image: url('i.webp');
+    
+    
+}
+   25% { 
+    background-image: url('ii.webp');
+    
+    
+}
+   50% { 
+    background-image: url('iii.webp');
+    
+}
+    75% { 
+    background-image: url('iiii.webp');
+ 
+}
+    100% { 
+    background-image: url('0.jpg');
+ 
+}
+}
+
+
+/*Задание 6*/
+.one11{
+    display: block;
+    width: 250px;
+    height: 170px;
+
+    animation: img11 1s linear infinite;
+    animation-direction: alternate;
+    position: relative;
+
+}
+@keyframes img11{
+    0%{
+        left: 0;
+    }
+    100%{
+       left:200px;
+    }
+}
+.one12{
+    display: block;
+    width: 250px;
+    height: 170px;
+
+    animation: img12 1s linear infinite;
+    animation-direction: alternate;
+    position: relative;
+
+}
+@keyframes img12{
+    0%{
+        left: 0;
+    }
+    50%{
+        left:100px;
+        border-radius: 200px;
+    }
+    100%{
+       left:200px;
+    }
+}
+.one13{
+    display: block;
+    width: 250px;
+    height: 170px;
+
+    animation: img13 4s linear infinite;
+    
+    position: relative;
+
+}
+@keyframes img13{
+    0%{
+        left: -900px;
+    }
+    100%{
+       left:800px;
+    }
+}
+.one14{
+    display: block;
+    width: 250px;
+    height: 170px;
+
+    animation: img14 1s linear infinite;
+    animation-direction: alternate;
+    position: relative;
+
+}
+@keyframes img14{
+    0%{
+        top: 0;
+    }
+    100%{
+        top:50px;
+    }
+}
+.one15{
+    display: block;
+    width: 250px;
+    height: 170px;
+
+    animation: img15 4s linear infinite;
+    
+    position: relative;
+
+}
+@keyframes img15{
+    0%{
+        left: 0;
+        top:0;
+    }
+    25%{
+        left:0px; 
+        top:50px;
+    }
+    50%{
+        left:50px;
+        top:50px
+    }
+    75%{
+       left:50px;
+       top:0px;
+    }
+    100%{
+       left:0px;
+       top:0px;
+    }
+}
+/*Задание 7*/
+.div{
+    width: 300px;
+    height: 300px;
+    font-size: medium;
+
+    animation: div 5s linear infinite;
+    
+    position: relative;
+}
+@keyframes div{
+    0%{color: rgb(156, 42, 42);}
+    20%{color: rgb(145, 161, 42);}
+    40%{color: rgb(100, 125, 42);}
+    60%{color: rgb(92, 105, 44);}
+    80%{color: rgb(132, 42, 105);}
+    100%{color: rgb(185, 92, 32);}
+}
+
+/*Лаб 8*/
+
+.nav li { 
+    display: inline;
+    float: left; 
+}
+.nav a {
+    display: inline-block; 
+    width: 130px;
+    border: 1.5px solid rgb(34, 147, 22);
+    padding: 10px 20px 10px 20px;
+    background-color: yellow;
+    text-decoration: none;
+    color: green;
+    font-size: 20px;
+    text-align: center;
+}
+.nav a:hover{
+    background-color: rgb(255, 222, 4);
+    color: rgb(8, 94, 8);
+}
+
+    
+
+
+

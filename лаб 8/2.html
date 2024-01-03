@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        nav  ul{
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+        }
+        nav>ul>li {
+            /* float: left; */
+            width: 180px;
+            position: relative;
+        }
+        nav li a {
+            display: block;
+            background: yellow;
+            border: 1px solid black;
+            padding: 8px;
+            text-decoration: none;
+        }
+         li .second {
+
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+        }
+        li:hover .second {
+            display: block;
+
+        }
+        li .second a {
+            background: orangered;
+            border: 1px dashed black;
+            color: black;
+            width: 80px;
+        }
+        li li {
+            width: 180px;
+
+        }
+
+    </style>
+</head>
+<body>
+    <nav >
+        <ul>
+            <li><a>Меню</a>
+                <ul class="second">
+                    <li><a href="C:\Users\nikit\OneDrive\Рабочий стол\КЯР\лаб 5\3-2.html">Форма</a></li>
+                    <li><a href="C:\Users\nikit\OneDrive\Рабочий стол\КЯР\лаб 5\4-2.html">Шахматная доска</a></li>
+                    <li><a href="C:\Users\nikit\OneDrive\Рабочий стол\КЯР\lab 6\gallery\gallery.html">Фотогалерея</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+</body>
+</html>

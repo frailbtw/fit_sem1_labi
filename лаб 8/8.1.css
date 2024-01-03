@@ -1,0 +1,41 @@
+aside {
+    width: 25%;
+    float: right;
+    box-shadow: inset 3px 0px 0px 0px black;
+    font-style: italic;
+    color: purple;
+    font-size: 20px;
+}
+.p1 {
+    margin: 20px;
+}
+.d2 p{
+    font-size: 20px;
+}
+.d2{
+    margin: 20px;
+    width: 950px;
+}
+ul{
+    list-style-type: none;
+}
+ul a{
+    display: block;
+    margin-top: 20px;
+    font-size: 20px;
+}
+a:link{
+    color: red;
+}
+a:visited{
+    color: #8B0000;
+}
+a:hover{
+    color: green;
+}
+a:active{
+    color: rgb(184, 134, 11);
+}
+a{
+    text-decoration: none;
+}
